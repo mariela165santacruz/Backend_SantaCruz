@@ -47,3 +47,5 @@ let data = {
 }
 
 let mariela = new User(data);
+mariela.addBook('Odisea', 'Homero');
+console.log = (mariela.getFullName());
