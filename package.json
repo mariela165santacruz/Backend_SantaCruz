@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariela165santacruz/Backend_SantaCruz.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Mariela Santa Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariela165santacruz/Backend_SantaCruz/issues"
+  },
+  "homepage": "https://github.com/mariela165santacruz/Backend_SantaCruz#readme"
+}
