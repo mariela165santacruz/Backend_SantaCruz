@@ -1,0 +1,17 @@
+[
+    {
+      "nombre": "Tomate",
+      "precio": 22,
+      "id": 2
+    },
+    {
+      "nombre": "Lechuga",
+      "precio": 33,
+      "id": 3
+    },
+    {
+      "nombre": "dasd",
+      "precio": "1212",
+      "id": 4
+    }
+  ]
