@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+<body>
+    <div id=app>
+        
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script>
+            let template = Handlebars.compile(
+                `<ul>
+                    <h1>datos personales</h1>
+                    <li>{{nombre}}</li>
+                    <li>{{apellido}}</li>
+                    <li>{{edad}}</li>
+                    <li>{{email}}</li>
+                    <li>{{telefono}}</li>
+                 </ul>`);
+        let data = {
+            nombre = "mariela",
+            apellido = "santa cruz",
+            edad = "19",
+            email ="msantacruz@gmail.com" , 
+            telefono = "12346768", 
+        }
+        let html = template(data);
+        document.getElementById("app").innerHTML = html;
+        </script>
+
+    </div>>
+</body>
+</html>
