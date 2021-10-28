@@ -1,0 +1,2 @@
+Habiendo probado tanto PUG,EJS y Handlebars, me resulto mas simple EJS ya que la sintaxis creo que es mas similar a JS y eso facilita las cosas
+y el HTML queda mas similar a como se haria realmente. 

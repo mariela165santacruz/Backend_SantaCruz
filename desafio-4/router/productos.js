@@ -59,8 +59,7 @@ productosRouter.delete('/:id', async (req, res) =>{
     idProducto = Number(req.params.id)
     const productoAEliminiar = await productosContenedor.getById(idProducto)
     if (productoAEliminiar === null ){
-        res.status(404);
-        res.send({ error : 'Producto no Encontrado' })
+        res.status(404).send({ error : 'Producto no Encontrado' })
         
     }else {
         await productosContenedor.deleteById(idProducto);
