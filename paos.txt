@@ -1,0 +1,7 @@
+para trabajar con nodejs
+
+-armar todas las carpetas necesarias
+-posicionarse en el proyecto 
+-ejecutar npm init
+-descargar librerias con npm i 
+   . ejemplo: npm i express morgan handlebars cors 

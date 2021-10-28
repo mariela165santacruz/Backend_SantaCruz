@@ -3,7 +3,7 @@ const express = require('express');
 const productosRouter = express.Router();
 
 const Contenedor = require('../../desafio-3/contenedor');
-const productosContenedor = new Contenedor('/data/productos.json')
+const productosContenedor = new Contenedor('./data/productos.json')
 
 productosRouter.get('/', async (req, res) =>{
     const lista = await productosContenedor.getAll()
@@ -27,13 +27,13 @@ productosRouter.get('/:id', async (req, res) =>{
 productosRouter.post('/', async (req, res) =>{
     const newProducto = req.body; 
     const idProductoNuevo = await productosContenedor.save(newProducto);
-    res.send({
-        message : 'success',
-        data: {
-            ...newProducto,
-            id: idProductoNuevo
-    }
-})
+    res.send({ 
+        message : 'success', 
+        data: { 
+            ...newProducto, 
+            id: idProductoNuevo 
+        } 
+    })
 })
 
 productosRouter.put('/:id', async (req, res) =>{
@@ -59,7 +59,9 @@ productosRouter.delete('/:id', async (req, res) =>{
     idProducto = Number(req.params.id)
     const productoAEliminiar = await productosContenedor.getById(idProducto)
     if (productoAEliminiar === null ){
+        res.status(404);
         res.send({ error : 'Producto no Encontrado' })
+        
     }else {
         await productosContenedor.deleteById(idProducto);
         res.send({ message : 'Producto Eliminado de Forma Correcta' })

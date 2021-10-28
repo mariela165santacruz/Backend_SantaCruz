@@ -28,7 +28,17 @@ app.use(cors(`${config.cors}`))
 const PORT = config.port;
 
 //Routes
-serverRoutes(app);
+//serverRoutes(app);
+app.get("/",(req, res, nest)=>{
+    let data = {
+        titulo = "Algun titulo",
+        mensaje = "lorem",
+        autor = "mariela santa cruz",
+        version = "12346768", 
+    }
+    res.render('home', {})
+    //res.send("SERVER ON");
+})
 
 //Start the server
 app.listen(PORT, ()=>{
