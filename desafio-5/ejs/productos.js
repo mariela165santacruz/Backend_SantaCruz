@@ -1,8 +1,7 @@
 class Productos {
     listaProductos = []
     idNuevo = 0
-    
-    
+  
     productoNuevo(producto){
       this.listaProductos.push({
         id:++this.idNuevo, 
@@ -12,7 +11,7 @@ class Productos {
       })
       return(this.listaProductos[this.id-1]); 
     }
-
+  
     leerProductos(){
       if (this.listaProductos.length<=0) {
         return {error:"Aun no existe ningun producto"}
@@ -20,7 +19,7 @@ class Productos {
         return this.listaProductos
       }
     }
-    
+   
     leerProductosConId(id){
       if (this.listaProductos[id-1]==undefined) {
         return {error:"Ese producto no existe aun"}
@@ -28,7 +27,7 @@ class Productos {
         return this.listaProductos[id-1]
       }    
     }
-
+   
     actualizarConID(id, productoNuevo){
       let idParsed=parseInt(id);   
           let productoAModificar=this.listaProductos.find((obj)=>{
@@ -60,4 +59,5 @@ class Productos {
     }  
   }
   
+
   module.exports= new Productos;
