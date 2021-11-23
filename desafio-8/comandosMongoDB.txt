@@ -1,0 +1,203 @@
+0) CREO LA BASE DE DATOS "ECOMMERCE"
+	use ecommerce
+1 y 2) AGREGO 10 PRODUCTOS Y MENSAJES, EN LOS PRODUCTOS EL PRECIO TIENE QUE VARIAR ENTRE 100 a 5000.
+	db.mensajes.insert([
+...     {
+...         "id_mensaje": 1001,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Tiene ese producto?"
+...     } ,
+...     {
+...         "id_mensaje": 1002,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Realizan envios?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1003,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Cuando me llega ese producto a mi domicilio?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1004,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "Necesito cuatro de estos productos"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1005,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "El producto puede llegar en el dia?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1006,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "Gracias por la atencion"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1007,
+...         "id_vendedor": 3,
+...         "mail": "prueba5@gmail.com",
+...         "texto": "Tiene stock de este producto?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1008,
+...         "id_vendedor": 3,
+...         "mail": "prueba5@gmail.com",
+...         "texto": "Lo necesito para la semana que viene"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1009,
+...         "id_vendedor": 3,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Estoy buscando este producto"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1010,
+...         "id_vendedor": 3,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Tiene ese producto en rojo?"
+...     }
+...
+... ])
+
+
+	db.mensajes.insert([
+...     {
+...         "id_mensaje": 1001,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Tiene ese producto?"
+...     } ,
+...     {
+...         "id_mensaje": 1002,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Realizan envios?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1003,
+...         "id_vendedor": 1,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Cuando me llega ese producto a mi domicilio?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1004,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "Necesito cuatro de estos productos"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1005,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "El producto puede llegar en el dia?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1006,
+...         "id_vendedor": 2,
+...         "mail": "prueba4@gmail.com",
+...         "texto": "Gracias por la atencion"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1007,
+...         "id_vendedor": 3,
+...         "mail": "prueba5@gmail.com",
+...         "texto": "Tiene stock de este producto?"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1008,
+...         "id_vendedor": 3,
+...         "mail": "prueba5@gmail.com",
+...         "texto": "Lo necesito para la semana que viene"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1009,
+...         "id_vendedor": 3,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Estoy buscando este producto"
+...     } ,
+...
+...     {
+...         "id_mensaje": 1010,
+...         "id_vendedor": 3,
+...         "mail": "prueba2@gmail.com",
+...         "texto": "Tiene ese producto en rojo?"
+...     }
+...
+... ])
+
+
+3)  LISTAR LOS DATOS
+db.mensajes.find().pretty()
+db.productos.find().pretty()
+
+4) MOSTRAR CANTIDAD DE ELEMENTOS
+db.message.count()
+db.products.count()
+
+5)
+a) AGREGAR UN PRODUCTO MÁS EN LA COLECCIÓN PRODUCTOS
+db.products.insert(
+{
+    "nombre": "sillon redondo" ,
+    "codigo": 131 ,
+    "precio": 1230 ,
+    "stock": 100 ,
+    "id_product": 10 
+})
+ 
+b) REALIZO CONSULTAS DE PRODUCTOS
+I) Consulta por nombre de producto
+	db.productos.find({ nombre: "sillon redondo" })
+
+II) Listo los productos con precio menor a 1000
+	db.productos.find({ precio: { $lt: 1000 } })
+
+III) Listo los productos con precio entre 1000 a 3000
+	db.productos.find({ precio: { $gt: 1000, $lt: 3000 } })
+
+IV) Listo los productos con precio mayor a 3000
+	db.productos.find({ precio: { $gt: 3000 } })
+
+V) Realizo una consulta que traiga sólo el nombre del tercer producto más barato
+	db.productos.find({},{nombre:1, _id: 0}).sort({precio:1})[2]
+
+
+c) HACER ACTUALIZACION DE TODOS SOBRER TODOS LOS PRODCUTOS QUE AGREGA EL CAMPO STOCK A TODOS ELLOS CON UN VALOR DE 100
+	db.productos.updateMany({}, { $set: { stock: 100  } })
+
+d)CAMBIO EL STOCK A CERO DE TODOS LOS PRODUCTOS CON PRECIOS MAYORES A 4000 
+	db.productos.updateMany({ precio: { $gt: 4000  }  }, { $set: { stock: 0  } })
+
+e) BORRO LOS PRODUCTOS CON PRECIO MENOR A 1000
+	db.productos.deleteMany({ precio: { $lt: 1000 } })
+
+6)CREAR USUARIO
+use admin
+db.createUser({
+  user : 'pepe',
+  pwd : 'asd456',
+  roles : [
+    {role : 'read', db : 'ecommerce'}
+  ]
+})

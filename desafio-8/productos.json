@@ -1,0 +1,73 @@
+[
+    {
+        "nombre": "mueble pino" ,
+        "codigo": 111 ,
+        "precio": 120 ,
+        "stock": 100 ,
+        "id_product": 0 
+    } ,
+    {
+        "nombre": "mueble roble" ,
+        "codigo": 112 ,
+        "precio": 580 ,
+        "stock": 180 ,
+        "id_product": 1 
+    } ,
+    {
+        "nombre": "mueble algarrobo" ,
+        "codigo": 113 ,
+        "precio": 900 ,
+        "stock": 150 ,
+        "id_product": 2
+    } ,
+    {
+        "nombre": "sillon cama" ,
+        "codigo": 114 ,
+        "precio": 1280 ,
+        "stock": 100 ,
+        "id_product": 3 
+    } ,
+    {
+        "nombre": "sillon escoces" ,
+        "codigo": 115 ,
+        "precio": 1700 ,
+        "stock": 100 ,
+        "id_product": 4 
+    } ,
+    {
+        "nombre": "silla madera " ,
+        "codigo": 126 ,
+        "precio": 2300 ,
+        "stock": 100 ,
+        "id_product": 5 
+    } ,
+    {
+        "nombre": "silla escritorio" ,
+        "codigo": 127 ,
+        "precio": 2860 ,
+        "stock": 170 ,
+        "id_product": 6 
+    } ,
+    {
+        "nombre": "mesa ratona" ,
+        "codigo": 128 ,
+        "precio": 3350 ,
+        "stock": 140 ,
+        "id_product": 7 
+    } ,
+    {
+        "nombre": "mesa escritorio" ,
+        "codigo": 129 ,
+        "precio": 4320 ,
+        "stock": 160 ,
+        "id_product": 8 
+    } ,
+    {
+        "nombre": "mesa comedor" ,
+        "codigo": 130 ,
+        "precio": 4990 ,
+        "stock": 150 ,
+        "id_product": 9 
+    } 
+    
+]
