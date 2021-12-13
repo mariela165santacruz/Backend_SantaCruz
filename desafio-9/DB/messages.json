@@ -1,0 +1,46 @@
+[
+    {
+      "author": {
+        "id": "pepegrillo@hotmail.com",
+        "nombre": "Pepe",
+        "apellido": "Grillo",
+        "edad": "20",
+        "alias": "PepeGrillo",
+        "avatar": "www.avatar.com/pepegrillo"
+      },
+      "text": "Hola"
+    },
+    {
+      "author": {
+        "id": "hercules33@hotmail.com",
+        "nombre": "Hercules",
+        "apellido": "Zeuz",
+        "edad": "33",
+        "alias": "ZeuzOlimpo",
+        "avatar": "www.avatar.com/zeuzolimpo"
+      },
+      "text": "Como Estas?"
+    },
+      { 
+      "author": {
+          "id": "prueba@hotmail.com", 
+          "nombre": "Pepe", 
+          "apellido": "Grillo", 
+          "edad": "20", 
+          "alias": "PepeGrillo",
+          "avatar": "www.avatar.com/pepegrillo"
+      },
+      "text": "Todo bien, vos?"
+    },
+      { 
+      "author": {
+        "id": "hercules33@hotmail.com",
+        "nombre": "Hercules",
+        "apellido": "Zeuz",
+        "edad": "33",
+        "alias": "ZeuzOlimpo",
+        "avatar": "www.avatar.com/zeuzolimpo"
+      },
+      "text": "Perfecto, gracias por preguntar"
+    }
+  ]
