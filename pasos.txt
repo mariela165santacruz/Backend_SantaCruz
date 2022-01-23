@@ -4,4 +4,11 @@ para trabajar con nodejs
 -posicionarse en el proyecto 
 -ejecutar npm init
 -descargar librerias con npm i 
-   . ejemplo: npm i express morgan handlebars cors 
+   . ejemplo: npm i express morgan handlebars cors
+
+npm i connect-mongo ejs express express-session mongoose nodemon passport passport-local socket.io
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.3.1" 
