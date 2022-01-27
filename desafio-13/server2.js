@@ -5,12 +5,8 @@ const app = express()
 
 const numCPUs = require('os').cpus().length
 
-/* VERIFICA MEDIANTE UN BOOLEANO SI ES CLUSTER */
-const isCluster = process.argv[2] === 'CLUSTER';
-
-/* EN CASO DE SER CLUSTER, MUESTRA POR CONSOLA LOS DATOS */
 /* MASTER */
-if(cluster.isMaster && isCluster) {
+if(cluster.isMaster) {
     console.log(`Cantidad de procesadores: ${numCPUs}`)
     console.log(`PID MASTER ${process.pid}`)
 
@@ -24,7 +20,6 @@ if(cluster.isMaster && isCluster) {
     })
 }
 
-/* EJECUTA EL MODO FORK AL NO SER REQUERIDO EL CLUSTER (FORK ES DEFAULT) */
 else {
     const PORT = parseInt(process.argv[2]) || 8081
 
