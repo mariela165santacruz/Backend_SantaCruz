@@ -2,7 +2,7 @@ const socket = io.connect();
 
 /* CARGA DE LISTADO DE PRODUCTOS */
 
-const chatForm = document.getElementById('form');
+const chatForm = document.getElementById('form')
 
 chatForm.addEventListener('submit', (event) => {
   event.preventDefault();
