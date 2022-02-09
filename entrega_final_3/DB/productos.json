@@ -1,0 +1,11 @@
+[
+    {
+      "nombre": "Logo",
+      "descripcion": "esto es un logo",
+      "foto": "https://images.vexels.com/media/users/3/157872/isolated/preview/8d20eee691b54d23d865a69f040cd7-icono-de-tierra-basica.png",
+      "precio": 1200,
+      "stock": 20,
+      "_id": "1",
+      "codigo": "1"
+    }
+  ]
