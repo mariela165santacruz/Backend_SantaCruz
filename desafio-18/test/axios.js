@@ -7,7 +7,7 @@ async function getProducts(){
 async function postProducts(){
     return await axios.post('http://localhost:8080/productos',
     {
-        "nombre": "Rueda Bicicleta MTB 26",
+        "nombre": "",
         "precio": "5",
         "foto": "https://contents.mediadcathlon.com/p1333/k$3a115af4670642212ca83006afe2ea23/sq/rueda-bicicleta-mtb-26-delantera-v-brake-pared-simple-negra.jpg?format=auto&f=640x640",
         "id": 5
@@ -20,7 +20,7 @@ async function deleteProduct(){
 
 async function putProduct(){
     return await axios.put('http://localhost:8080/productos',
-    {"nombre" : "Rueda 26 New with .put"})
+    {"nombre" : ""})
 }
 
 const testAxios = () =>{
