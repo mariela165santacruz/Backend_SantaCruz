@@ -1,0 +1,20 @@
+[
+    {
+      "nombre": "Lechuga",
+      "descripcion": "Verde y Criolla",
+      "código": "B048",
+      "foto": "www.supermercado.com.ar/foto_lechuga",
+      "precio": 22,
+      "stock": 66,
+      "id": 1
+    },
+    {
+      "nombre": "Jugo de Tomate",
+      "descripcion": "Tomate en Lata",
+      "código": "A001",
+      "foto": "www.supermercado.com.ar/foto_tomate",
+      "precio": 11,
+      "stock": 150,
+      "id": 2
+    }
+  ]
